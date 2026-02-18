@@ -28,13 +28,43 @@ def decrypt(encrypted_text, key_seed):
     return decrypted.decode()
 
 if __name__ == "__main__":
-    # Example
+    print("EJEMPLOS DE STREAM CIPHER")
+    
+    print("Ejemplo #1")
     og_message = "Hello, World!"
     key_seed = 3
 
     encrypted_message = encrypt(og_message, key_seed)
-    print(f"Original message: {og_message}")
-    print(f"Encrypted message: {encrypted_message}")
+    print(f"Mensaje original: {og_message}")
+    print(f"Mensaje cifrado (bytes): {encrypted_message}")
+    print(f"Mensaje cifrado (hexadecimal): {encrypted_message.hex()}")
 
     decrypted_message = decrypt(encrypted_message, key_seed)
-    print(f"Decrypted message: {decrypted_message}")
+    print(f"Mensaje descifrado: {decrypted_message}")
+    print(f"Clave utilizada: {key_seed}")
+
+    print("\n\nEjemplo #2")
+    og_message = "Bienvenidos a la clase de cifrado"
+    key_seed = 876
+    
+    encrypted_message = encrypt(og_message, key_seed)
+    print(f"Mensaje original: {og_message}")
+    print(f"Mensaje cifrado (bytes): {encrypted_message}")
+    print(f"Mensaje cifrado (hexadecimal): {encrypted_message.hex()}")
+
+    decrypted_message = decrypt(encrypted_message, key_seed)
+    print(f"Mensaje descifrado: {decrypted_message}")
+    print(f"Clave utilizada: {key_seed}")
+
+    print("\n\nEjemplo #3")
+    og_message = "Este es otro ejemplo de stream cipher"
+    key_seed = 25864
+    
+    encrypted_message = encrypt(og_message, key_seed)
+    print(f"Mensaje original: {og_message}")
+    print(f"Mensaje cifrado (bytes): {encrypted_message}")
+    print(f"Mensaje cifrado (hexadecimal): {encrypted_message.hex()}")
+
+    decrypted_message = decrypt(encrypted_message, key_seed)
+    print(f"Mensaje descifrado: {decrypted_message}")
+    print(f"Clave utilizada: {key_seed}")
