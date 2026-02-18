@@ -27,13 +27,14 @@ def decrypt(encrypted_text, key_seed):
     decrypted = bytes([t ^ k for t, k in zip(encrypted_text, keystream)])
     return decrypted.decode()
 
-# Example
-og_message = "Hello, World!"
-key_seed = 3
+if __name__ == "__main__":
+    # Example
+    og_message = "Hello, World!"
+    key_seed = 3
 
-encrypted_message = encrypt(og_message, key_seed)
-print(f"Original message: {og_message}")
-print(f"Encrypted message: {encrypted_message}")
+    encrypted_message = encrypt(og_message, key_seed)
+    print(f"Original message: {og_message}")
+    print(f"Encrypted message: {encrypted_message}")
 
-decrypted_message = decrypt(encrypted_message, key_seed)
-print(f"Decrypted message: {decrypted_message}")
+    decrypted_message = decrypt(encrypted_message, key_seed)
+    print(f"Decrypted message: {decrypted_message}")
